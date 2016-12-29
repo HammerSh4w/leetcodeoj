@@ -1,2 +1,2 @@
 # leetcodeoj
-My leetcode subscription.
+My leetcode submission.
