@@ -1,0 +1,30 @@
+class Solution {
+public:
+    vector<string> fizzBuzz(int n) {
+        vector<string> fizzbuzz(n);
+        int i, flag3, flag5;
+        stringstream ss;
+        for (i = 1; i <= n; i++){
+    	    flag3 = i % 3;
+    	    flag5 = i % 5;
+    	
+        	if (flag3 && flag5){
+    	    	ss << i;
+    	    	ss >> fizzbuzz[i-1]; // convert int to string
+	    	}
+	    	else if (flag5){
+	    		fizzbuzz[i-1] = "Fizz";
+	    	}
+	    	else if (flag3){
+	    		fizzbuzz[i-1] = "Buzz";
+	    	}
+	    	else{
+	    		fizzbuzz[i-1] = "FizzBuzz";
+	    	}
+	    	ss.clear();
+	      	
+	    }
+	
+    	return fizzbuzz;
+    }
+};
